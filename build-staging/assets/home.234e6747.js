@@ -1,1 +1,0 @@
-import{d as o,c as a,f as s,F as l}from"./vendor.6d9cc618.js";var n=o({name:"App",setup:()=>(console.log("获取全局变量",{VITE_USER_NODE_ENV:"production",VITE_APP_OUTDIR:"build-staging",BASE_URL:"/",MODE:"staging",DEV:!1,PROD:!0}),()=>a(l,null,[a("h1",null,[s("Home")])]))});export default n;
