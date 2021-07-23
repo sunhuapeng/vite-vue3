@@ -1,0 +1,22 @@
+{
+  "name": "project-name",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "staging": "vite build --mode staging"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^1.2.4",
+    "@vitejs/plugin-vue-jsx": "^1.1.6",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "vue": "^3.0.4",
+    "vue-router": "^4.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.5",
+    "@vue/compiler-sfc": "^3.0.4",
+    "vite": "2.0.4"
+  }
+}
