@@ -39,25 +39,29 @@ const onWindowResize = () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-export function init(id: string) {
+const ready = function (id: string) {
   container = document.getElementById(id) as HTMLElement
   container.appendChild(renderer.domElement)
 
   scene.background = new THREE.Color(0xffffff)
+
+  scene.position.setY(-20)
+
   renderer.setPixelRatio(window.devicePixelRatio); //设置渲染的比例
   renderer.setSize(width, window.innerHeight); //设置渲染的尺寸
 
-  camera.position.set(50, 50, 50)
+  camera.position.set(10, 0, 10)
   const canvasDom = document.querySelector("#" + id + " canvas") as HTMLElement
   controls = new OrbitControls(
     camera,
     canvasDom
   );
   axesHelper = new THREE.AxesHelper(250);
-  console.log(scene)
   scene.add(axesHelper);
   animate()
-
+}
+export function init(id: string) {
+  ready(id)
   const geometry = new THREE.BoxGeometry(2, 2, 2);
   const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
   const cube = new THREE.Mesh(geometry, material);
