@@ -8,7 +8,7 @@ export default defineComponent({
   setup() {
     return () => (
       <>
-        <robot-view></robot-view>
+        <p>首页</p>
       </>
     )
   }
