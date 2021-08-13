@@ -8,7 +8,7 @@ export default defineComponent({
   setup() {
     return () => (
       <>
-        <p>首页</p>
+        <p class="w">首页</p>
       </>
     )
   }

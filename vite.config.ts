@@ -2,6 +2,7 @@ import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import path from 'path';
+import Markdown from 'vite-plugin-md'
 
 const pathResolve = (pathStr: string) => {
   return path.resolve(__dirname, pathStr);
@@ -16,7 +17,7 @@ module.exports = ({ mode }) => {
       outDir: model(mode).VITE_APP_OUTDIR,
     },
     plugins: [
-      vue(), vueJsx(),
+      vue({include: [/\.vue$/, /\.md$/],}), vueJsx(), Markdown()
     ],
     resolve: {
       alias: {
